@@ -4,6 +4,10 @@ from lxml import html
 from lxml import etree as ET
 from typing import List
 from result_class import Result
+from selenium import webdriver
+import chromedriver_binary
+
+driver = webdriver.Chrome()
 
 def create_tree(url: str, filename=None):
     headers = {'Content-Type': 'text/html', }
@@ -14,11 +18,12 @@ def create_tree(url: str, filename=None):
     return tree
 
 def parse_good(link_item):
+    driver.get(f'{link_item}')
     item_tree = create_tree(f'{link_item}')
     item_name = item_tree.xpath('//h1/text()')[0] or ''
     item_img =  item_tree.xpath("//span[@id='view_full_size']//img/@src")[0] or ''
-    item_price = item_tree.xpath("//span[@id='our_price_display']/text()")[0] or ''
-    item_description = item_tree.xpath("string(//div[@class='rte'])") or ''
+    item_price = driver.find_element_by_xpath("//span[@class='price']").text or ''
+    item_description = item_tree.xpath("//div[@class='rte']/p//text()")[0] or ''
     return Item(item_name, item_img, item_price, item_description)
 
 def create_xml_tree(results: List[Item]):
