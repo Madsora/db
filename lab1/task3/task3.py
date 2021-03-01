@@ -1,7 +1,7 @@
 from item_class import Item 
 import requests
 from lxml import html
-from lxml import etree as ET
+from lxml import etree
 from typing import List
 from result_class import Result
 from selenium import webdriver
@@ -17,7 +17,7 @@ def create_tree(url: str, filename=None):
 
     return tree
 
-def parse_good(link_item):
+def parse_item(link_item):
     driver.get(f'{link_item}')
     item_tree = create_tree(f'{link_item}')
     item_name = item_tree.xpath('//h1/text()')[0] or ''
@@ -27,28 +27,23 @@ def parse_good(link_item):
     return Item(item_name, item_img, item_price, item_description)
 
 def create_xml_tree(results: List[Item]):
-    root = ET.Element('data')
+    root = etree.Element('data')
     i = 0
 
     for result in results:
-        item = ET.SubElement(root, 'item')
+        item = etree.SubElement(root, 'item')
         item.set('index', str(i))
-
-        img = ET.SubElement(item, 'img')
+        img = etree.SubElement(item, 'img')
         img.text = result.img
-
-        price = ET.SubElement(item, 'price')
+        price = etree.SubElement(item, 'price')
         price.text = result.price
-
-        description = ET.SubElement(item, 'description')
+        description = etree.SubElement(item, 'description')
         description.text = result.description
-
-        name = ET.SubElement(item, 'name')
+        name = etree.SubElement(item, 'name')
         name.text = result.name
-
         i += 1
-
-    tree = ET.ElementTree(root)
+        
+    tree = etree.ElementTree(root)
     return tree
 
 def save_to_xml_file(filename, tree):
