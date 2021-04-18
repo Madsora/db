@@ -1,0 +1,114 @@
+INFO:root:2021-04-18 01:04:33.331463 Actor: user2 Action: register 
+
+INFO:root:2021-04-18 01:04:39.926146 Actor: user2 Action: log in 
+
+INFO:root:
+2021-04-18 01:04:39.931710 Event: User user2 signed in
+INFO:root:2021-04-18 01:05:46.196128 Actor: user2 Action: sign out 
+
+INFO:root:
+2021-04-18 01:05:46.201989 Event: User user2 signed out
+INFO:root:2021-04-18 01:05:47.640418 Actor: user2 Action: sign out 
+
+INFO:root:2021-04-18 01:11:10.954404 Actor: edwardsrobert Action: register 
+
+INFO:root:2021-04-18 01:11:10.955049 Actor: edwardsrobert Action: log in 
+
+INFO:root:2021-04-18 01:11:10.957174 Actor: kmartin Action: register 
+
+INFO:root:2021-04-18 01:11:10.957742 Actor: kmartin Action: log in 
+
+INFO:root:2021-04-18 01:11:10.959722 Actor: vparker Action: register 
+
+INFO:root:2021-04-18 01:11:10.960219 Actor: vparker Action: log in 
+
+INFO:root:2021-04-18 01:11:10.962194 Actor: vnelson Action: register 
+
+INFO:root:2021-04-18 01:11:10.962749 Actor: vnelson Action: log in 
+
+INFO:root:2021-04-18 01:11:10.964508 Actor: ygilbert Action: register 
+
+INFO:root:2021-04-18 01:11:10.964952 Actor: ygilbert Action: log in 
+
+INFO:root:
+2021-04-18 01:18:16.945542 Event: User edwardsrobert sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:16.980153 Event: User ygilbert sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:18.068260 Event: User edwardsrobert sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:18.915346 Event: User vnelson sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:19.123900 Event: User ygilbert sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:19.146346 Event: User vparker sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:20.051655 Event: User kmartin sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:20.248352 Event: User ygilbert sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:20.254435 Event: User kmartin sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:21.357615 Event: User vparker sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:21.357766 Event: User ygilbert sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:21.391129 Event: User kmartin sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:24.339546 Event: User kmartin sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:24.697870 Event: User kmartin sent spam message: "spam"
+INFO:root:
+2021-04-18 01:18:25.181543 Event: User ygilbert sent spam message: "spam"
+INFO:root:2021-04-18 01:21:14.209188 Actor: eschneider Action: register 
+
+INFO:root:2021-04-18 01:21:14.209498 Actor: eschneider Action: log in 
+
+INFO:root:2021-04-18 01:21:14.210599 Actor: morgan91 Action: register 
+
+INFO:root:2021-04-18 01:21:14.210879 Actor: morgan91 Action: log in 
+
+INFO:root:2021-04-18 01:21:14.212070 Actor: sanchezamy Action: register 
+
+INFO:root:2021-04-18 01:21:14.212491 Actor: sanchezamy Action: log in 
+
+INFO:root:2021-04-18 01:21:14.213872 Actor: gsmith Action: register 
+
+INFO:root:2021-04-18 01:21:14.214200 Actor: gsmith Action: log in 
+
+INFO:root:2021-04-18 01:21:14.215728 Actor: zlewis Action: register 
+
+INFO:root:2021-04-18 01:21:14.216095 Actor: zlewis Action: log in 
+
+INFO:root:
+2021-04-18 01:22:12.582976 Event: User sanchezamy sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:13.682441 Event: User zlewis sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:14.764486 Event: User morgan91 sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:14.786846 Event: User eschneider sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:15.681980 Event: User gsmith sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:15.878911 Event: User zlewis sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:15.927995 Event: User morgan91 sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:16.961565 Event: User morgan91 sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:16.972907 Event: User sanchezamy sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:17.803028 Event: User gsmith sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:18.077626 Event: User sanchezamy sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:19.179960 Event: User sanchezamy sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:19.191686 Event: User zlewis sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:19.229352 Event: User eschneider sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:20.331266 Event: User gsmith sent spam message: "spam"
+INFO:root:
+2021-04-18 01:22:20.800410 Event: User gsmith sent spam message: "spam"
