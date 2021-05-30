@@ -5,7 +5,7 @@ from threading import Thread
 import redis
 
 from servers.neo4j_server.Neo4jServer import Neo4jServer
-from view import View
+from view import ViewHelper
 
 
 class Worker(Thread):
@@ -71,4 +71,4 @@ if __name__ == '__main__':
         while True:
             pass
     except Exception as e:
-        View.show_error(str(e))
+        ViewHelper.show_error(str(e))

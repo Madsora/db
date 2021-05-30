@@ -12,7 +12,7 @@ class RedisServer(object):
         self.__r = redis.Redis(charset="utf-8", decode_responses=True)
         self.__neo4j_server = neo4j_server
 
-    def registration(self, username):
+    def sign_up(self, username):
         if self.__r.hget('users:', username):
             raise Exception(f"User with name: \'{username}\' already exists")
 
@@ -30,7 +30,7 @@ class RedisServer(object):
         })
 
         pipeline.execute()
-        self.__neo4j_server.registration(username, user_id)
+        self.__neo4j_server.sign_up(username, user_id)
         logging.info(f"User {username} registered at {datetime.datetime.now()} \n")
         return user_id
 

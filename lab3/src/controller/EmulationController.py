@@ -1,7 +1,7 @@
 from random import randint, choice
 from threading import Thread
 
-from controller.Controller import Tags
+from controller.controller import Tags
 from servers.neo4j_server.Neo4jServer import Neo4jServer
 from servers.redis_server.RedisServer import RedisServer
 from faker import Faker
@@ -16,7 +16,7 @@ class EmulationController(Thread):
         self.__server = RedisServer(Neo4jServer())
         self.__users_list = users_list
         self.__users_count = users_count
-        self.__server.registration(username)
+        self.__server.sign_up(username)
         self.__user_id = self.__server.sign_in(username)
 
     def run(self):

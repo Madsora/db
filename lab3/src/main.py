@@ -1,8 +1,8 @@
 
-from controller.Controller import Controller
+from controller.controller import Controller
 from controller.EmulationController import EmulationController
 from controller.Neo4jController import Neo4jController
-from view import View
+from view import ViewHelper
 from faker import Faker
 import random
 
@@ -10,18 +10,18 @@ import random
 def emulation():
 
     fake = Faker()
-    users_count = 5
-    users = [fake.profile(fields=['username'], sex=None)['username'] for u in range(users_count)]
+    users_amount = 10
+    users = [fake.profile(fields=['username'], sex=None)['username'] for u in range(users_amount)]
     threads = []
     try:
 
-        for i in range(users_count):
-            threads.append(EmulationController(users[i], users, users_count, random.randint(1, 2)))
+        for i in range(users_amount):
+            threads.append(EmulationController(users[i], users, users_amount, random.randint(1, 2)))
         for thread in threads:
             thread.start()
 
     except Exception as e:
-        View.show_error(str(e))
+        ViewHelper.show_error(str(e))
     finally:
         for thread in threads:
             if thread.is_alive():

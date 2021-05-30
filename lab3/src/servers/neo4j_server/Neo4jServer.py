@@ -1,7 +1,7 @@
 from neo4j import GraphDatabase
 
-from view import View
-from controller.Controller import Tags
+from view import ViewHelper
+from controller.controller import Tags
 
 
 class Neo4jServer(object):
@@ -16,7 +16,7 @@ class Neo4jServer(object):
         with self.__driver.session() as session:
             session.run("MATCH (n) DETACH DELETE n")
 
-    def registration(self, username, redis_id):
+    def sign_up(self, username, redis_id):
         with self.__driver.session() as session:
             session.run("MERGE (u:user {name: $username, redis_id: $redis_id})"
                         "ON CREATE SET u.online = false", username=username, redis_id=redis_id)
@@ -38,7 +38,7 @@ class Neo4jServer(object):
                 for tag in message["tags"]:
                     session.write_transaction(self.__add_tag_to_messages, messages_id, tag)
             except Exception as e:
-                View.show_error(str(e))
+                ViewHelper.show_error(str(e))
 
     @staticmethod
     def __create_message_as_relation(tx, sender_id, consumer_id, message_id):

@@ -1,5 +1,5 @@
 from inspect import signature
-from view import View
+from view import ViewHelper
 
 from enum import Enum
 
@@ -17,11 +17,11 @@ class Controller(object):
     @staticmethod
     def make_choice(menu_list: list, name_of_menu: str):
         try:
-            View.draw_menu(menu_list, name_of_menu)
-            return Controller.get_uint_value("Make your choice: ", len(menu_list))
+            ViewHelper.show_menu(menu_list, name_of_menu)
+            return Controller.get_uint_value("Select option: ", len(menu_list))
 
         except Exception as e:
-            View.show_error(str(e))
+            ViewHelper.show_error(str(e))
 
     @staticmethod
     def considering_choice(controller, choice: int, list_of_func: list):
@@ -32,7 +32,7 @@ class Controller(object):
             desired_func = list_of_func[choice]
             desired_func(controller)
         except Exception as e:
-            View.show_error(str(e))
+            ViewHelper.show_error(str(e))
 
     @staticmethod
     def get_func_arguments(func, amount_of_missing_arguments=0) -> list:
@@ -44,8 +44,6 @@ class Controller(object):
             list_of_arguments.append(Controller.get_value(
                 f"Enter {list(list_of_parameters)[i]}{special_parameters[list(list_of_parameters)[i]] if list(list_of_parameters)[i] in special_parameters else ''}: ",
                 str))
-        # for parameter in list_of_parameters:
-        #     list_of_arguments.append(Controller.get_value(f"Enter {parameter}: ", str))
         return list_of_arguments
 
     @staticmethod
@@ -68,7 +66,7 @@ class Controller(object):
                 else:
                     return type_of_var(usr_input)
             except Exception as e:
-                View.show_error(str(e))
+                ViewHelper.show_error(str(e))
 
     @staticmethod
     def stop_loop(controller):
