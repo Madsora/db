@@ -112,3 +112,51 @@ INFO:root:
 2021-04-18 01:22:20.331266 Event: User gsmith sent spam message: "spam"
 INFO:root:
 2021-04-18 01:22:20.800410 Event: User gsmith sent spam message: "spam"
+INFO:root:2021-04-18 11:49:26.687800 Actor: user2 Action: log in 
+
+INFO:root:2021-04-18 12:06:12.100793 Actor: brooke82 Action: register 
+
+INFO:root:2021-04-18 12:06:12.121656 Actor: brooke82 Action: log in 
+
+INFO:root:2021-04-18 12:06:12.125231 Actor: brandi71 Action: register 
+
+INFO:root:2021-04-18 12:06:12.127871 Actor: brandi71 Action: log in 
+
+INFO:root:2021-04-18 12:06:12.135294 Actor: william71 Action: register 
+
+INFO:root:2021-04-18 12:06:12.137496 Actor: william71 Action: log in 
+
+INFO:root:2021-04-18 12:06:12.139664 Actor: nicole47 Action: register 
+
+INFO:root:2021-04-18 12:06:12.140051 Actor: nicole47 Action: log in 
+
+INFO:root:2021-04-18 12:06:12.144366 Actor: slee Action: register 
+
+INFO:root:2021-04-18 12:06:12.145666 Actor: slee Action: log in 
+
+INFO:root:
+2021-04-18 12:06:12.441058 Event: User brandi71 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:12.686486 Event: User brandi71 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:12.812882 Event: User slee sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:12.899001 Event: User william71 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:13.034123 Event: User nicole47 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:13.282739 Event: User slee sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:13.526127 Event: User brandi71 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:13.682513 Event: User brooke82 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:14.006625 Event: User slee sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:14.149553 Event: User brooke82 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:14.234786 Event: User brooke82 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:14.268729 Event: User brandi71 sent spam message: "spam"
+INFO:root:
+2021-04-18 12:06:14.301652 Event: User nicole47 sent spam message: "spam"
