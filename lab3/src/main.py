@@ -29,7 +29,7 @@ def emulation():
 
 
 if __name__ == "__main__":
-    choice = Controller.make_choice(["Neo4j", "Emulation(use one time with worker for generate db)"], "Program mode")
+    choice = Controller.make_choice(["Neo4j", "Emulation(use one time with worker for generate db)"], "Main menu")
     if choice == 0:
         Neo4jController()
     elif choice == 1:
